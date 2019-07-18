@@ -5,14 +5,17 @@
       {{ else }}
       {{ partial "logo.html" . }}
       <div class="copyright">
-        <span
-          >© {{ now.Year }} Powered by
-          <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span
-        >
-        <span
-          >Theme created by
-          <a href="https://twitter.com/panr" target="_blank" rel="noopener">panr</a></span
-        >
+        <span>© {{ now.Year }}</span>
+
+        <div class="social-links">
+          {{ partial "social_link.html" (dict "param" $.Site.Params.Github "baseURL" "https://github.com/" "icon" "fab fa-github-square" ) }}
+
+          {{ partial "social_link.html" (dict "param" $.Site.Params.Twitter "baseURL" "https://twitter.com/" "icon" "fab fa-twitter-square" ) }}
+
+          {{ partial "social_link.html" (dict "param" $.Site.Params.Linkedin "baseURL" "https://www.linkedin.com/in/" "icon" "fab fa-linkedin" ) }}
+
+          {{ partial "social_link.html" (dict "param" $.Site.Params.Email "baseURL" "mailto:" "icon" "fas fa-envelope-square" ) }}
+        </div>
       </div>
     {{ end }}
   </div>

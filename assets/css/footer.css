@@ -43,6 +43,22 @@
       }
     }
 
+    .social-links {
+      @media (--tablet) {
+        flex-direction: row;
+      }
+    }
+
+    .social-link {
+      font-size: 1.4em;
+      margin-right: 8px;
+
+      /* Remove underlines from visited links */
+      a {
+        text-decoration: none;
+      }
+    }
+
     @media (--tablet) {
       flex-direction: column;
       margin-top: 10px;
