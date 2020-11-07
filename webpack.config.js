@@ -16,6 +16,7 @@ module.exports = (env, { mode, watch }) => ({
   entry: {
     main: [join("assets", "js", "menu.js"), join("assets", "js", "theme.js")],
     prism: join("assets", "js", "prism.js"),
+    icons: join("assets", "js", "icons.js"),
     style: join("assets", "css", "style.css"),
   },
   output: {

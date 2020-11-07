@@ -112,7 +112,15 @@ $ git submodule add https://github.com/panr/hugo-theme-hello-friend.git themes/h
 
 ## How to run your site
 
-From your Hugo root directory run:
+The theme is using [Hugo Pipes](https://gohugo.io/hugo-pipes/) to handle Javascript and PostCSS files. This setup **requires** following npm packages:
+
+```
+@babel/cli @babel/core @babel/preset-env @fortawesome/fontawesome-free browserslist clipboard cssnano postcss-cli postcss-import postcss-mixins postcss-nested postcss-preset-env postcss-url
+```
+
+Before you start, you have to install them (globally or locally).
+
+Then from your Hugo root directory, run:
 
 ```
 $ hugo server -t hello-friend
